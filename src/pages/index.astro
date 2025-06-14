@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <!doctype html>
@@ -12,38 +13,428 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+		<Layout title="John Doe Lawyer - Expert Legal Services">
+			<section class="hero">
+				<img 
+					src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+					alt="Law office interior" 
+					class="hero-image"
+				/>
+				<div class="hero-overlay"></div>
+				<div class="hero-content">
+					<h1>John Doe Lawyer</h1>
+					<p>Expert legal services with a personal touch</p>
+					<div class="hero-buttons">
+						<a href="/contact" class="btn btn-primary">Contact Us</a>
+						<a href="/services" class="btn btn-secondary">Our Services</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="about container">
+				<h2>About Us</h2>
+				<p>With over 20 years of experience, we provide expert legal services in corporate law, family law, and real estate law. Our team of dedicated professionals is committed to delivering personalized solutions for all your legal needs.</p>
+			</section>
+
+			<section class="faq container">
+				<h2>Frequently Asked Questions</h2>
+				<div class="faq-grid">
+					<div class="faq-item">
+						<button class="faq-question">
+							What areas of law do you specialize in?
+							<span class="faq-icon">+</span>
+						</button>
+						<div class="faq-answer">
+							<p>We specialize in corporate law, family law, and real estate law. Our team has extensive experience in handling complex legal matters in these areas.</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-question">
+							How do I schedule a consultation?
+							<span class="faq-icon">+</span>
+						</button>
+						<div class="faq-answer">
+							<p>You can schedule a consultation by calling our office, filling out the contact form on our website, or sending us an email. We typically respond within 24 hours.</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-question">
+							What are your fees?
+							<span class="faq-icon">+</span>
+						</button>
+						<div class="faq-answer">
+							<p>Our fees vary depending on the type of case and its complexity. We offer both hourly rates and fixed-fee arrangements. During your initial consultation, we'll provide a detailed fee structure.</p>
+						</div>
+					</div>
+
+					<div class="faq-item">
+						<button class="faq-question">
+							Do you offer virtual consultations?
+							<span class="faq-icon">+</span>
+						</button>
+						<div class="faq-answer">
+							<p>Yes, we offer virtual consultations via video conference for your convenience. This allows us to serve clients regardless of their location.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="practice-areas container">
+				<h2>Our Practice Areas</h2>
+				<div class="practice-grid">
+					<div class="practice-card">
+						<i class="fas fa-building"></i>
+						<h3>Corporate Law</h3>
+						<p>Expert guidance in corporate governance, mergers and acquisitions, and business transactions.</p>
+					</div>
+					<div class="practice-card">
+						<i class="fas fa-home"></i>
+						<h3>Real Estate Law</h3>
+						<p>Comprehensive legal services for all your property needs, from transactions to disputes.</p>
+					</div>
+					<div class="practice-card">
+						<i class="fas fa-users"></i>
+						<h3>Family Law</h3>
+						<p>Compassionate support for all family-related legal matters, including divorce and custody.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="testimonials container">
+				<h2>Client Testimonials</h2>
+				<div class="testimonial-grid">
+					<div class="testimonial-card">
+						<div class="testimonial-content">
+							<p>"John and his team provided exceptional service during our corporate merger. Their expertise and attention to detail were invaluable."</p>
+						</div>
+						<div class="testimonial-author">
+							<h4>Sarah Johnson</h4>
+							<p>CEO, Tech Solutions Inc.</p>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-content">
+							<p>"The family law team handled my case with professionalism and care. I couldn't have asked for better representation."</p>
+						</div>
+						<div class="testimonial-author">
+							<h4>Michael Brown</h4>
+							<p>Client</p>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-content">
+							<p>"Their real estate expertise helped us navigate a complex property transaction smoothly. Highly recommended!"</p>
+						</div>
+						<div class="testimonial-author">
+							<h4>Emily Davis</h4>
+							<p>Property Developer</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</Layout>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.hero {
+		position: relative;
+		height: 80vh;
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 1;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7));
+		z-index: 2;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 3;
+		text-align: center;
+		color: white;
+		padding: 0 2rem;
+		max-width: 800px;
+	}
+
+	.hero-content h1 {
+		font-size: 4rem;
+		color:#fff;
+		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+	}
+
+	.hero-content p {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	}
+
+	.hero-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 1rem 2rem;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.btn-primary {
+		background-color: var(--accent-color);
+		color: white;
+	}
+
+	.btn-primary:hover {
+		background-color: #b6986d;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	}
+
+	.btn-secondary {
+		background-color: transparent;
+		color: white;
+		border: 2px solid white;
+	}
+
+	.btn-secondary:hover {
+		background-color: white;
+		color: var(--primary-color);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	}
+
+	.about {
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.about h2 {
+		color: var(--primary-color);
+		margin-bottom: 1.5rem;
+		font-size: 2.5rem;
+	}
+
+	.about p {
+		max-width: 800px;
+		margin: 0 auto;
+		font-size: 1.2rem;
+		line-height: 1.6;
+		color: var(--text-color);
+	}
+
+	.faq {
+		padding: 4rem 0;
+		background-color: #f9f9f9;
+	}
+
+	.faq h2 {
+		text-align: center;
+		color: var(--primary-color);
+		margin-bottom: 3rem;
+		font-size: 2.5rem;
+	}
+
+	.faq-grid {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		margin-bottom: 1rem;
+		border: 1px solid #e0e0e0;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.faq-question {
+		width: 100%;
+		padding: 1.5rem;
+		background: white;
+		border: none;
+		text-align: left;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--primary-color);
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: background-color 0.3s ease;
+	}
+
+	.faq-question:hover {
+		background-color: #f5f5f5;
+	}
+
+	.faq-icon {
+		font-size: 1.5rem;
+		transition: transform 0.3s ease;
+	}
+
+	.faq-item.active .faq-icon {
+		transform: rotate(45deg);
+	}
+
+	.faq-answer {
+		padding: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.3s ease;
+		background: white;
+	}
+
+	.faq-item.active .faq-answer {
+		padding: 1.5rem;
+		max-height: 500px;
+	}
+
+	.faq-answer p {
+		margin: 0;
+		color: var(--text-color);
+		line-height: 1.6;
+	}
+
+	.practice-areas {
+		padding: 4rem 0;
+		background-color: var(--light-bg);
+	}
+
+	.practice-areas h2 {
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--primary-color);
+	}
+
+	.practice-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.practice-card {
+		background: white;
+		border-radius: 8px;
+		overflow: hidden;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.practice-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.practice-card i {
+		font-size: 2rem;
+		padding: 1.5rem;
+		color: var(--primary-color);
+	}
+
+	.practice-card h3 {
+		padding: 1.5rem 1.5rem 0.5rem;
+		color: var(--primary-color);
+	}
+
+	.practice-card p {
+		padding: 0 1.5rem 1.5rem;
+		color: var(--text-color);
+	}
+
+	.testimonials {
+		padding: 4rem 0;
+	}
+
+	.testimonials h2 {
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--primary-color);
+	}
+
+	.testimonial-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.testimonial-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	}
+
+	.testimonial-content {
+		margin-bottom: 1rem;
+	}
+
+	.testimonial-author {
+		text-align: right;
+		font-style: italic;
+	}
+
+	.testimonial-author h4 {
+		font-weight: 600;
+		color: var(--primary-color);
+	}
+
+	.testimonial-author p {
+		color: var(--text-color);
+	}
+
+	@media (max-width: 768px) {
+		.hero-content h1 {
+			font-size: 2.5rem;
+		}
+
+		.hero-content p {
+			font-size: 1.2rem;
+		}
+
+		.hero-buttons {
+			flex-direction: column;
+		}
+
+		.btn {
+			width: 100%;
+			text-align: center;
+		}
+	}
+</style>
+
+<script>
+	document.querySelectorAll('.faq-question').forEach(button => {
+		button.addEventListener('click', () => {
+			const faqItem = button.parentElement;
+			faqItem.classList.toggle('active');
+		});
+	});
+</script>

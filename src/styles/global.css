@@ -45,7 +45,6 @@ body {
 }
 main {
 	width: 720px;
-	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -126,6 +125,10 @@ blockquote {
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 @media (max-width: 720px) {
 	body {

@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Our Services - John Doe Lawyer">
+  <section class="hero">
+    <img 
+      src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+      alt="Law office interior" 
+      class="hero-image"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Our Legal Services</h1>
+      <p>Comprehensive legal solutions tailored to your needs</p>
+    </div>
+  </section>
+
+  <section class="services container">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Corporate Law" />
+        </div>
+        <div class="service-content">
+          <h2>Corporate Law</h2>
+          <p>Expert guidance in corporate governance, mergers and acquisitions, and business transactions.</p>
+          <ul>
+            <li>Business Formation</li>
+            <li>Contract Negotiation</li>
+            <li>Mergers & Acquisitions</li>
+            <li>Corporate Compliance</li>
+          </ul>
+          <a href="/contact" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1011&q=80" alt="Family Law" />
+        </div>
+        <div class="service-content">
+          <h2>Family Law</h2>
+          <p>Compassionate support for all family-related legal matters.</p>
+          <ul>
+            <li>Divorce Proceedings</li>
+            <li>Child Custody</li>
+            <li>Child Support</li>
+            <li>Adoption</li>
+          </ul>
+          <a href="/contact" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Real Estate Law" />
+        </div>
+        <div class="service-content">
+          <h2>Real Estate Law</h2>
+          <p>Comprehensive legal services for all your property needs.</p>
+          <ul>
+            <li>Property Transactions</li>
+            <li>Lease Agreements</li>
+            <li>Property Disputes</li>
+            <li>Zoning Issues</li>
+          </ul>
+          <a href="/contact" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+
+  .services {
+    padding: 4rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-image {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover .service-image img {
+    transform: scale(1.05);
+  }
+
+  .service-content {
+    padding: 2rem;
+  }
+
+  .service-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .service-content p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  .service-content ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-content ul li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .service-content ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+
+  .btn:hover {
+    background-color: #b6986d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style> 
